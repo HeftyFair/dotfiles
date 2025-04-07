@@ -1,0 +1,73 @@
+# Added by OrbStack: 'orb' SSH host for Linux machines
+# This only works if it's at the top of ssh_config (before any Host blocks).
+# Comment this line if you don't want it to be added again.
+Include ~/.orbstack/ssh/config
+
+
+Include /Users/andreigavrilov/.lima/*/ssh.config
+
+
+# This SSH config file can be passed to 'ssh -F'.
+# This file is created by Lima, but not used by Lima itself currently.
+# Modifications to this file will be lost on restarting the Lima instance.
+#
+
+Host archlinux
+  HostName 100.91.191.94
+  User kwqcheii
+
+Host win
+  HostName 100.117.68.117
+  User desktop-mc555em\\kwqcheii
+
+Host win_lan
+  HostName 192.168.31.8
+  User desktop-mc555em\\kwqcheii
+
+Host myhost
+  HostName 100.87.90.74
+  User kwqcheii
+
+Host ali
+  HostName 115.29.214.49
+  User ecs-user
+
+Host ali_ts
+  HostName 100.115.75.86
+  User ecs-user
+
+# Host myhost_proxy
+#   HostName 100.87.90.74
+#   User kwqcheii
+#   ProxyJump ali_ts
+
+
+# Host mygitea
+#   HostName 10.78.6.1
+#   IdentityFile ~/.ssh/id_ed25519.pub
+#   User git
+#   Port 22
+
+
+# Host Tokyo
+#   HostName 124.156.211.13
+#   User ubuntu
+#
+# Host Malaysia
+#   HostName 47.250.42.243
+#   User root
+#
+# Host Singapore
+#   HostName 43.134.184.18
+#   User ubuntu
+#
+# Host Nightingale
+#   HostName 124.156.211.13
+#   User nightingale
+#   Port 9003
+
+
+Host syz
+  HostName 211.65.197.144
+  User old_world_sparrow
+  Port 16573

@@ -1,0 +1,20 @@
+
+
+$ZDOTDIR/.zfunc kind:fpath
+zsh-users/zsh-completions path:src kind:fpath
+
+conda-incubator/conda-zsh-completion
+#nix-community/nix-zsh-completions kind:fpath
+
+mattmc3/ez-compinit
+
+Aloxaf/fzf-tab
+
+#zdharma-continuum/fast-syntax-highlighting kind:defer
+#zsh-users/zsh-history-substring-search
+zsh-users/zsh-syntax-highlighting
+
+
+zsh-users/zsh-autosuggestions
+
+# jeffreytse/zsh-vi-mode
