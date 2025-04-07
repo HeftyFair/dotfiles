@@ -1,0 +1,10 @@
+
+typeset -U path
+path=(
+  $HOME/scripts
+  ~/go/bin
+  $path
+  )
+#export ELECTRON_OZONE_PLATFORM_HINT=auto
+#export LC_CTYPE=C.UTF-8
+export OLLAMA_ORIGINS='*'

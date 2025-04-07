@@ -1,0 +1,68 @@
+wsl = false
+#no-multigrid = true
+vsync = true
+maximized = false
+#srgb = false
+#idle = true
+# neovim-bin = "/usr/bin/nvim" # in reality found dynamically on $PATH if unset
+frame = "transparent"
+# frame = "full"
+# frame = "full"
+title-hidden = true
+tabs = true
+
+
+[font]
+size = 14
+hinting = "full"
+edging = "antialias"
+
+[[font.normal]]
+# family = "JetBrainsMono Nerd Font"
+# family = "Cascadia Code PL"
+family = "Monaspace Argon Var"
+# family = "Monaspace Neon"
+# family = "JetBrains Mono"
+# style = "W400"
+
+# You can set a different font for fallback
+# [[font.normal]]
+# family = "Noto Color Emoji"
+# family = "Monaspace Argon Var"
+# family = "Symbols Nerd Font"
+# style = "Normal"
+
+
+[font.features]
+"Monaspace Argon Var" = [
+  "+liga",
+  "+calt",
+  "+ss01",
+  "+ss02",
+  "+ss03",
+  "+ss04",
+  "+ss05",
+  "+ss06",
+  "+ss07",
+  "+ss08",
+  "+ss09",
+  "+ss10",
+]
+
+# [[font.bold]]
+# family = "JetBrainsMono Nerd Font Propo"
+# style = "W600"
+
+# No need to specify fallback in every variant, if omitted or specified here
+# but not found, it will fallback to normal font with this weight which is bold
+# in this case.
+# [[font.bold]]
+# family = "Noto Sans CJK SC"
+# style = "Bold"
+
+
+# [font]
+# # normal = ["Iosevka Term Slab"]
+# # normal = ["Jetbrains Mon"]
+# normal = ["Cascadia Code NF"]
+# size = 15
