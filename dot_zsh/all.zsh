@@ -146,4 +146,5 @@ function _update_all() {
   pushd "$HOME/.config/nvim" && git pull && popd
   rustup upgrade
   dotfiles pull
+  uv tool uprgade --all
 }
