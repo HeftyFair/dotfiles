@@ -59,7 +59,7 @@ function use_package() {
   export CMAKE_PREFIX_PATH="$PACKAGE_DIR/lib/cmake/"
 }
 
-export PATH="/Applications/IDA Professional 9.0.app/Contents/MacOS":$PATH
+export PATH="/Applications/IDA Professional 9.1.app/Contents/MacOS":$PATH
 export PATH="/Applications/010 Editor.app/Contents/CmdLine":$PATH
 export PATH="/Applications/Wireshark.app/Contents/MacOS":$PATH
 
@@ -81,27 +81,18 @@ function use_android() {
 export GPG_TTY=$(tty)
 # export GPG_TTY
 
-
-
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/homebrew/Caskroom/miniforge/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+# >>> mamba initialize >>>
+# !! Contents within this block are managed by 'mamba shell init' !!
+export MAMBA_EXE='/opt/homebrew/Caskroom/miniforge/base/bin/mamba';
+export MAMBA_ROOT_PREFIX='/opt/homebrew/Caskroom/miniforge/base';
+__mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
 if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
+    eval "$__mamba_setup"
 else
-    if [ -f "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/conda.sh" ]; then
-        . "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/conda.sh"
-    else
-        export PATH="/opt/homebrew/Caskroom/miniforge/base/bin:$PATH"
-    fi
+    alias mamba="$MAMBA_EXE"  # Fallback on help from mamba activate
 fi
-unset __conda_setup
-
-if [ -f "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/mamba.sh" ]; then
-    . "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/mamba.sh"
-fi
-# <<< conda initialize <<<
+unset __mamba_setup
+# <<< mamba initialize <<<
 
 
 
@@ -121,6 +112,7 @@ function cleanup() {
   brew cleanup
   nix store gc
   go clean -modcache
+  uv cache clean
 }
 
 function use_llvm() {
@@ -149,10 +141,13 @@ alias jeb='bash /Users/andreigavrilov/source/tools/jeb/jeb_macos.sh'
 alias jnitrace='/Users/andreigavrilov/source/research/android/frida/jnitrace/bin/jnitrace'
 
 
-export IDASDKDIR="/Users/andreigavrilov/source/backups/kopia/idapro90rc1/misc/idasdk90"
+# export IDASDKDIR="/Users/andreigavrilov/source/backups/kopia/idapro90rc1/misc/idasdk90"
 
 
 alias keka="/Applications/Keka.app/Contents/MacOS/Keka --cli"
 alias git-pull-all='gfind . -maxdepth 1 -type d -execdir git -C {} pull \;'
 
-alias rye='/Users/andreigavrilov/.rye/shims/rye'
+
+# alias preview="qlmanage -p"
+alias preview="open -a Preview"
+

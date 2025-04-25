@@ -19,6 +19,8 @@ alias la='eza --icons=auto -a'
 alias ll='eza -lF --icons=auto'
 alias lla='eza -la'
 alias lt="eza --tree"
+alias lt1="eza --tree --level=1"
+alias lt2="eza --tree --level=2"
 alias lls="lsd --hyperlink=always"
 alias ltg='lsd --tree $(IGNORE=$(git rev-parse --show-toplevel)/.gitignore; if [ -f "$IGNORE" ]; then xargs printf " --ignore-glob=%s" < "$IGNORE"; fi)'
 # alias ll='lsd -l'
@@ -102,6 +104,8 @@ alias bhelp='bat --plain --language=help'
 help() {
     "$@" --help 2>&1 | bhelp
 }
+
+alias fabric='fabric-ai'
 
 
 # -----------------------------------------------------------------------------

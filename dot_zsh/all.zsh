@@ -71,7 +71,8 @@ function _set_theme ()
     export BAT_THEME="Monokai Extended Light"
     export LS_COLORS="$(vivid generate ayu)"
   elif [[ $THEME == "Dark" ]]; then
-    (type vivid &> /dev/null) && export LS_COLORS="$(vivid generate catppuccin-frappe)"
+    # (type vivid &> /dev/null) && export LS_COLORS="$(vivid generate catppuccin-frappe)"
+    (type vivid &> /dev/null) && export LS_COLORS="$(vivid generate tokyonight-storm)"
   fi
 }
 
@@ -146,5 +147,5 @@ function _update_all() {
   pushd "$HOME/.config/nvim" && git pull && popd
   rustup upgrade
   dotfiles pull
-  uv tool uprgade --all
+  uv tool upgrade --all
 }
