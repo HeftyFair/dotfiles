@@ -65,16 +65,18 @@ export MANROFFOPT="-c"
 #   fi
 # }
 
-function _set_theme ()
-{
-  if [[ $THEME == "Light" ]]; then
-    export BAT_THEME="Monokai Extended Light"
-    export LS_COLORS="$(vivid generate ayu)"
-  elif [[ $THEME == "Dark" ]]; then
-    # (type vivid &> /dev/null) && export LS_COLORS="$(vivid generate catppuccin-frappe)"
-    (type vivid &> /dev/null) && export LS_COLORS="$(vivid generate tokyonight-storm)"
-  fi
-}
+# function _set_theme ()
+# {
+if theme_light; then
+  export BAT_THEME="Monokai Extended Light"
+  export LS_COLORS="$(vivid generate ayu)"
+  export LS_COLORS_THEME=ayu
+else
+  # (type vivid &> /dev/null) && export LS_COLORS="$(vivid generate catppuccin-frappe)"
+  (type vivid &> /dev/null) && export LS_COLORS="$(vivid generate tokyonight-storm)"
+  export LS_COLORS_THEME=tokyonight-storm
+fi
+# }
 
 # typeset -g theme_functions
 # theme_functions=($theme_functions theme_func_bat)
@@ -89,21 +91,21 @@ function _set_theme ()
 
 
 
-function theme_light() {
-  export THEME=Light
-  [[ -v KITTY_WINDOW_ID ]] && kitty +kitten themes --reload-in=all 'Doom One Light'
-  echo "export THEME=Light" > ~/.zsh/theme.zsh
-  _set_theme
-}
-#
-function theme_dark() {
-  export THEME=Dark
-  kitty +kitten themes --reload-in=all 'One Half Dark'
-  echo "export THEME=Dark" > ~/.zsh/theme.zsh
-  _set_theme
-}
+# function theme_light() {
+#   export THEME=Light
+#   [[ -v KITTY_WINDOW_ID ]] && kitty +kitten themes --reload-in=all 'Doom One Light'
+#   echo "export THEME=Light" > ~/.zsh/theme.zsh
+#   _set_theme
+# }
+# #
+# function theme_dark() {
+#   export THEME=Dark
+#   kitty +kitten themes --reload-in=all 'One Half Dark'
+#   echo "export THEME=Dark" > ~/.zsh/theme.zsh
+#   _set_theme
+# }
 
-_set_theme
+# _set_theme
 
 function cminit() {
   mkdir src

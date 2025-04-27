@@ -30,10 +30,7 @@ antidote load ${ZDOTDIR:-$HOME}/.zsh_plugins.txt
 
 type fzf &> /dev/null && eval "$(fzf --zsh)"
 
-
-if [[ -f "$HOME/.zsh/theme.zsh" ]]; then
-  source "$HOME/.zsh/theme.zsh"
-fi
+[[ -f "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
 
 
 if [[ -d "$HOME/.zsh" ]]; then

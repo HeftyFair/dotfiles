@@ -106,6 +106,7 @@ help() {
 }
 
 alias fabric='fabric-ai'
+alias bn="binaryninja"
 
 
 # -----------------------------------------------------------------------------
@@ -128,6 +129,10 @@ function adb_lldb {
 # -----------------------------------------------------------------------------
 alias ida_server_linux="ssh -t -L 23946:localhost:23946 myhost '~/source/bin/linux_server'"
 # alias ida_server_linux "ssh -t -L 23946:localhost:23946 myhost '~/source/bin/linux_server'"
+
+
+
+
 
 # -----------------------------------------------------------------------------
 # AI-powered Git Commit Function
