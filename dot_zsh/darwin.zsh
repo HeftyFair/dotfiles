@@ -31,14 +31,14 @@ export PATH=$PATH:'/Applications/Binary Ninja.app/Contents/MacOS'
 
 # export PATH="/opt/homebrew/opt/binutils/bin:$PATH"
 #
-function theme_func_kitty()
-{
-  if [[ $THEME == "Light" ]]; then
-    kitty +kitten themes --reload-in=all 'Doom One Light'
-  elif [[ $THEME == "Dark" ]]; then
-    kitty +kitten themes --reload-in=all 'One Half Dark'
-  fi
-}
+# function theme_func_kitty()
+# {
+#   if [[ $THEME == "Light" ]]; then
+#     kitty +kitten themes --reload-in=all 'Doom One Light'
+#   elif [[ $THEME == "Dark" ]]; then
+#     kitty +kitten themes --reload-in=all 'One Half Dark'
+#   fi
+# }
 
 
 # typeset -g theme_functions
@@ -150,4 +150,6 @@ alias git-pull-all='gfind . -maxdepth 1 -type d -execdir git -C {} pull \;'
 
 # alias preview="qlmanage -p"
 alias preview="open -a Preview"
+alias marginnote="cd '/Users/andreigavrilov/Library/Mobile Documents/iCloud~QReader~MarginStudy~easy/Documents/'"
 
+export PATH="$PATH:/Applications/Hopper Disassembler v4.app/Contents/MacOS/"
