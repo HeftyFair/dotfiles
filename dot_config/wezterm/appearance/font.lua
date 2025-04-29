@@ -8,13 +8,13 @@ M.config = {
 		-- { family = "Cascadia Code", weight = "Medium" },
 		-- { family = "JetBrains Mono", weight = "Medium" },
 		{
-			family = "Monaspace Argon Var",
+			-- family = "Monaspace Argon Var",
 			-- family='Monaspace Neon',
 			-- family='Monaspace Xenon',
 			-- family='Monaspace Radon',
 			-- family='Monaspace Krypton',
 			-- family='Iosevka Term',
-			-- family='Cascadia Code',
+			family='Cascadia Code',
 			-- family='JetBrains Mono',
 			-- family='Menlo',
 

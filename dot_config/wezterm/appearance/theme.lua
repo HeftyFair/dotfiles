@@ -14,10 +14,10 @@ if wezterm.gui.get_appearance():find("Dark") then
 	-- config.color_scheme = "Dracula"
 	config.color_scheme = "One Dark (Gogh)"
 else
-	config.color_scheme = "Tokyo Night Day"
+	-- config.color_scheme = "Tokyo Night Day"
 	-- config.color_scheme = "Tomorrow (gogh)"
-	-- config.color_scheme = "Tomorrow"
-	-- config.color_scheme = "Tokyo Night"
+	config.color_scheme = "Tomorrow"
+	-- config.color_scheme = "Builtin Tango Light"
 end
 
 

@@ -31,7 +31,7 @@ table.insert(keys, {
 
 M.config = {
   keys = keys,
-	window_background_opacity = 0.80,
+	-- window_background_opacity = 0.80,
 	window_decorations = "INTEGRATED_BUTTONS | RESIZE",
 	macos_window_background_blur = 35,
 	front_end = "WebGpu",
