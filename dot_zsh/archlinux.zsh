@@ -41,5 +41,6 @@ export PATH=$PATH:$PIN_ROOT
 
 export PATH=$PATH:"/home/kwqcheii/source/applications/android-studio-for-platform-Stable.2.13/bin"
 
-alias rye=/home/kwqcheii/.rye/shims/rye
-alias cursor=/home/kwqcheii/Desktop/cursor.AppImage
+# alias cursor=/home/kwqcheii/Desktop/cursor.AppImage
+
+export PATH=$PATH:"$HOME/ida-pro-9.1/"
