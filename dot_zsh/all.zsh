@@ -67,12 +67,13 @@ export MANROFFOPT="-c"
 
 # function _set_theme ()
 # {
-if theme_light; then
+if command -v theme_light >/dev/null 2>&1 && theme_light; then
+  # (type vivid &> /dev/null) && export LS_COLORS="$(vivid generate catppuccin-frappe)"
   export BAT_THEME="Monokai Extended Light"
-  export LS_COLORS="$(vivid generate ayu)"
+  # export LS_COLORS="$(vivid generate ayu)"
+  (type vivid &> /dev/null) && export LS_COLORS="$(vivid generate ayu)"
   export LS_COLORS_THEME=ayu
 else
-  # (type vivid &> /dev/null) && export LS_COLORS="$(vivid generate catppuccin-frappe)"
   (type vivid &> /dev/null) && export LS_COLORS="$(vivid generate tokyonight-storm)"
   export LS_COLORS_THEME=tokyonight-storm
 fi
