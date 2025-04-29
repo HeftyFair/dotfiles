@@ -153,3 +153,10 @@ alias preview="open -a Preview"
 alias marginnote="cd '/Users/andreigavrilov/Library/Mobile Documents/iCloud~QReader~MarginStudy~easy/Documents/'"
 
 export PATH="$PATH:/Applications/Hopper Disassembler v4.app/Contents/MacOS/"
+
+
+
+
+function export_func() {
+  nm --export-symbols $1 -s '__TEXT' '__text'
+}
