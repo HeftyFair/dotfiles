@@ -129,7 +129,7 @@ function adb_lldb {
 # -----------------------------------------------------------------------------
 alias ida_server_linux="ssh -t -L 23946:localhost:23946 myhost '~/source/bin/linux_server'"
 # alias ida_server_linux "ssh -t -L 23946:localhost:23946 myhost '~/source/bin/linux_server'"
-
+alias serve='python3 -m http.server 10005 -d'
 
 
 
