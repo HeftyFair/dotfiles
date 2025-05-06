@@ -22,9 +22,8 @@ export PATH="/opt/homebrew/opt/grep/libexec/gnubin":$PATH
 type fzf &> /dev/null && eval "$(fzf --zsh)"
 
 
-
 eval "$(fnm env --use-on-cd)"
-export PATH=$PATH:'/Applications/Binary Ninja.app/Contents/MacOS'
+# export PATH=$PATH:'/Applications/Binary Ninja.app/Contents/MacOS'
 
 #. "$HOME/.rye/env"
 
@@ -123,6 +122,10 @@ function use_depot() {
   export PATH="/Users/andreigavrilov/source/chromium/depot_tools/":"$PATH"
 }
 
+function use_binutils() {
+    export PATH="/opt/homebrew/opt/binutils/bin:$PATH"
+}
+
 
 function enter_pwn() {
   # . <(nix print-dev-env $HOME/source/practice/ctf/env/re/ | awk '!/LINENO\s*=\s*/')
@@ -153,8 +156,6 @@ alias preview="open -a Preview"
 alias marginnote="cd '/Users/andreigavrilov/Library/Mobile Documents/iCloud~QReader~MarginStudy~easy/Documents/'"
 
 export PATH="$PATH:/Applications/Hopper Disassembler v4.app/Contents/MacOS/"
-
-
 
 
 function export_func() {

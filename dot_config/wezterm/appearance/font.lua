@@ -11,10 +11,10 @@ M.config = {
 			-- family = "Monaspace Argon Var",
 			-- family='Monaspace Neon',
 			-- family='Monaspace Xenon',
-			-- family='Monaspace Radon',
+			family='Monaspace Radon Var',
 			-- family='Monaspace Krypton',
 			-- family='Iosevka Term',
-			family='Cascadia Code',
+			-- family='Cascadia Code',
 			-- family='JetBrains Mono',
 			-- family='Menlo',
 
