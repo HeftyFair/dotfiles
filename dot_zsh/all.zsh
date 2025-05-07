@@ -54,6 +54,8 @@ export MANROFFOPT="-c"
 # set_theme
 
 # in your .bashrc/.zshrc/*rc
+#
+export PATH="$HOME/.cargo/bin:$PATH"
 
 
 # function theme_func_kitty()
