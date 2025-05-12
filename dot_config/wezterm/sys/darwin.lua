@@ -30,13 +30,15 @@ table.insert(keys, {
 
 M.config = {
   keys = keys,
-  window_background_opacity = wezterm.gui and wezterm.gui.get_appearance():find("Dark") and 0.80 or 1.0,
-
-  window_decorations = "INTEGRATED_BUTTONS | RESIZE",
-  macos_window_background_blur = 35,
+  window_background_opacity = wezterm.gui and wezterm.gui.get_appearance():find("Dark") and 0.80 or 0.70,
+  macos_window_background_blur = 30,
+  -- window_decorations = "INTEGRATED_BUTTONS | RESIZE",
+  window_decorations = "RESIZE",
   front_end = "WebGpu",
   native_macos_fullscreen_mode = true,
   webgpu_power_preference = "HighPerformance",
+  -- default_cursor_style = "SteadyBlock",
+  default_cursor_style = "BlinkingBar",
 }
 
 return M

@@ -86,3 +86,8 @@ export PATH="$HOME/source/bin:$PATH"
 alias pwndbg='/home/kwqcheii/source/bin/pwndbg/bin/pwndbg'
 
 export PATH="$HOME/source/bin/codeql:$PATH"
+
+
+function pbcopy() {
+  printf "\033]52;c;%s\007" "$(base64 | tr -d '\n')"
+}

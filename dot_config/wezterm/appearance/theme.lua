@@ -1,10 +1,8 @@
-
 local wezterm = require 'wezterm'
 
 local M = {}
 
 local config = {
-
 }
 
 if wezterm.gui.get_appearance():find("Dark") then
@@ -21,9 +19,24 @@ else
 end
 
 
+local scheme = wezterm.color.get_builtin_schemes()[config.color_scheme]
+
+M.scheme = scheme
+
+-- config.colors = {
+-- 	tab_bar = {
+-- 		new_tab = {
+-- 			bg_color = scheme.background,
+-- 			fg_color = scheme.foreground,
+-- 		},
+-- 		new_tab_hover = {
+-- 			bg_color = scheme.background,
+-- 			fg_color = scheme.foreground,
+-- 		},
+-- 		inactive_tab_edge = '#111111',
+-- 	},
+-- }
 
 M.config = config
-
-M.scheme = wezterm.color.get_builtin_schemes()[config.color_scheme]
 
 return M

@@ -11,7 +11,7 @@ M.config = {
 			-- family = "Monaspace Argon Var",
 			-- family='Monaspace Neon',
 			-- family='Monaspace Xenon',
-			family='Monaspace Radon Var',
+			family = 'Monaspace Radon Var',
 			-- family='Monaspace Krypton',
 			-- family='Iosevka Term',
 			-- family='Cascadia Code',
@@ -31,8 +31,8 @@ M.config = {
 				"ss07",
 				"ss08",
 				"ss09",
-        "ss10",
-        "ss11"
+				"ss10",
+				"ss11"
 			},
 		},
 		-- { family = "Menlo", weight = "Medium" },
