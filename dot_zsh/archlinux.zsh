@@ -41,6 +41,11 @@ export PATH=$PATH:$PIN_ROOT
 
 export PATH=$PATH:"/home/kwqcheii/source/applications/android-studio-for-platform-Stable.2.13/bin"
 
-# alias cursor=/home/kwqcheii/Desktop/cursor.AppImage
+# if not in ssh
+if [ -z "$SSH_TTY" ]; then
+  # export PATH=$PATH:"$HOME/source/applications/cursor-linux/cursor"
+  alias cursor=/home/kwqcheii/Desktop/cursor.AppImage
+fi
+
 
 export PATH=$PATH:"$HOME/ida-pro-9.1/"
