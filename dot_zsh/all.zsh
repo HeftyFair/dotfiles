@@ -154,3 +154,16 @@ function _update_all() {
   dotfiles pull
   uv tool upgrade --all
 }
+
+
+
+function use_package() {
+  export PACKAGE_DIR="$HOME/source/package"
+  export PATH="$PACKAGE_DIR/bin":$PATH
+  export LIBRARY_PATH="$PACKAGE_DIR/lib"
+  export LD_RUN_PATH="$PACKAGE_DIR/lib"
+  export CPATH="$PACKAGE_DIR/include"
+  export CMAKE_PREFIX_PATH="$PACKAGE_DIR/lib/cmake/"
+  export CMAKE_INSTALL_PREFIX="$PACKAGE_DIR"
+  export PKG_CONFIG_PATH="$PACKAGE_DIR/lib/pkgconfig/"
+}

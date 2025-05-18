@@ -17,7 +17,7 @@ fpath=(/nix/store/dy3gm8llzibzqrk6gfb34yviq8bcr1s4-vagrant-2.4.1/lib/ruby/gems/3
 #
 
 #
-use_pin ()
+function use_pin ()
 {
     export PIN_ROOT="$HOME/source/pintools/pin-external-3.31-98861-g71afcc22f-gcc-linux"
     export PATH=${PIN_ROOT}:$PATH
@@ -27,16 +27,6 @@ use_pin ()
 
 export KUBECONFIG="$HOME/.kube/config"
 
-function use_package() {
-  export PACKAGE_DIR="$HOME/source/package"
-  export PATH="$PACKAGE_DIR/bin":$PATH
-  export LIBRARY_PATH="$PACKAGE_DIR/lib"
-  export LD_RUN_PATH="$PACKAGE_DIR/lib"
-  export CPATH="$PACKAGE_DIR/include"
-  export CMAKE_PREFIX_PATH="$PACKAGE_DIR/lib/cmake/"
-  export CMAKE_INSTALL_PREFIX="$PACKAGE_DIR"
-  export PKG_CONFIG_PATH="/home/kwqcheii/source/package/lib/pkgconfig/"
-}
 
 # . "$HOME/.rye/env"
 

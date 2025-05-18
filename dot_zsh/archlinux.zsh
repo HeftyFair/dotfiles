@@ -19,17 +19,6 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 
-
-function use_package() {
-  export PACKAGE_DIR=/home/kwqcheii/bcache/source/package
-  export PATH="$PACKAGE_DIR/bin":$PATH
-  export LIBRARY_PATH="$PACKAGE_DIR/lib"
-  export LD_RUN_PATH="$PACKAGE_DIR/lib"
-  export CPATH="$PACKAGE_DIR/include"
-  export CMAKE_PREFIX_PATH="$PACKAGE_DIR/lib/cmake/"
-}
-
-
 function use_depot_tools() {
   export DEPOT_PATH=/home/kwqcheii/source/depot_tools
   export PATH="$DEPOT_PATH":$PATH
