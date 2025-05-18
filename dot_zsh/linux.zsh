@@ -44,6 +44,14 @@ function nvimle() {
 alias gfw='sudo systemctl start mihomo'
 alias wfg='sudo systemctl stop mihomo'
 
+function direct() {
+  curl 'http://127.0.0.1:9097/configs?force=true' -d '{"mode": "direct"}' -X PATCH
+}
+
+function rule() {
+  curl 'http://127.0.0.1:9097/configs?force=true' -d '{"mode": "rule"}' -X PATCH
+}
+
 
 function enter_re() {
   # . <(nix print-dev-env $HOME/source/practice/ctf/env/re/ | awk '!/LINENO\s*=\s*/')
