@@ -1,0 +1,92 @@
+{
+    // "editor.accessibilitySupport": "off",
+    "[python]": {
+        "editor.formatOnType": true,
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "haskell.manageHLS": "GHCup",
+    "workbench.iconTheme": "vscode-icons",
+    "editor.inlineSuggest.enabled": true,
+    "svelte.enable-ts-plugin": true,
+    // "editor.fontFamily": "'Monaspace Neon', monospace",
+    "editor.fontLigatures": "'calt', 'liga', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09'",
+    // "editor.fontFamily": "Monaspace Xenon Var",
+    // "editor.fontFamily": "Monaspace Argon Var`",
+    "editor.fontFamily": "Monaspace Radon Var",
+    // "editor.fontFamily": "Maple Mono",
+    //   "editor.fontFamily": "Cascadia Code",
+    // "editor.fontFamily": "JetBrains Mono",
+    "editor.fontSize": 14,
+    "editor.fontWeight": "500",
+    "cmake.configureOnOpen": true,
+    "git.autofetch": true,
+    "window.autoDetectColorScheme": true,
+    "terminal.integrated.inheritEnv": false,
+    "update.showReleaseNotes": false,
+    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.macOptionIsMeta": true,
+    "workbench.colorTheme": "Spinel",
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "latex-workshop.intellisense.optionalArgsEntries.enabled": false,
+    "latex-workshop.linting.chktex.convertOutput.column.enabled": false,
+    "cmake.pinnedCommands": [
+        "cmake.ctest",
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
+    "workbench.editorAssociations": {
+        "*.pcap": "default"
+    },
+    "files.watcherExclude": {
+        "**/.bloop": true,
+        "**/.metals": true,
+        "**/.ammonite": true
+    },
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "remote.SSH.remotePlatform": {
+        "win": "windows"
+    },
+    "C_Cpp.default.cppStandard": "c++20",
+    "hexeditor.columnWidth": 16,
+    "hexeditor.showDecodedText": true,
+    "hexeditor.defaultEndianness": "little",
+    "hexeditor.inspectorType": "aside",
+    "dart.flutterSdkPath": "/Users/andreigavrilov/source/flutter/flutter",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "go.inlayHints.assignVariableTypes": true,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "denoland.vscode-deno"
+    },
+    "js/ts.implicitProjectConfig.target": "ES2023",
+    "typescript.inlayHints.variableTypes.enabled": true,
+    "javascript.inlayHints.variableTypes.enabled": true,
+    "javascript.inlayHints.parameterTypes.enabled": true,
+    "javascript.inlayHints.parameterNames.enabled": "literals",
+    "workbench.preferredDarkColorTheme": "Ayu Dark",
+    "cursor.cpp.disabledLanguages": [
+        "plaintext",
+        "markdown",
+        "scminput",
+        "racket",
+        "latex"
+    ],
+    "workbench.preferredLightColorTheme": "Default Light Modern",
+    "vs-kubernetes": {
+        "vs-kubernetes.crd-code-completion": "enabled"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
+}
