@@ -37,8 +37,8 @@ M.config = {
   front_end = "WebGpu",
   native_macos_fullscreen_mode = true,
   webgpu_power_preference = "HighPerformance",
-  -- default_cursor_style = "SteadyBlock",
-  default_cursor_style = "BlinkingBar",
+  default_cursor_style = "SteadyBlock",
+  -- default_cursor_style = "BlinkingBar",
 }
 
 return M

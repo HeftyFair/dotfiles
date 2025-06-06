@@ -48,20 +48,8 @@ eval "$(fnm env --use-on-cd)"
 
 export PATH="/Users/andreigavrilov/source/flutter/flutter/bin":$PATH
 
-
-function use_package() {
-  export PACKAGE_DIR="$HOME/source/package/"
-  export PATH="$PACKAGE_DIR/bin":$PATH
-  export LIBRARY_PATH="$PACKAGE_DIR/lib"
-  export LD_RUN_PATH="$PACKAGE_DIR/lib"
-  export CPATH="$PACKAGE_DIR/include"
-  export CMAKE_PREFIX_PATH="$PACKAGE_DIR/lib/cmake/"
-}
-
-export PATH="/Applications/IDA Professional 9.1.app/Contents/MacOS":$PATH
 export PATH="/Applications/010 Editor.app/Contents/CmdLine":$PATH
 export PATH="/Applications/Wireshark.app/Contents/MacOS":$PATH
-
 
 
 export ANDROID_HOME=/Users/andreigavrilov/Library/Android/sdk
@@ -161,3 +149,7 @@ export PATH="$PATH:/Applications/Hopper Disassembler v4.app/Contents/MacOS/"
 function export_func() {
   nm --export-symbols $1 -s '__TEXT' '__text'
 }
+
+# alias ida="/Applications/IDA Professional 9.1.app/Contents/MacOS/ida"
+
+export PATH="$PATH:/Applications/IDA Professional 9.1.app/Contents/MacOS/"

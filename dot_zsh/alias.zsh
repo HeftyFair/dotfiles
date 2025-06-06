@@ -132,6 +132,7 @@ alias ida_server_linux="ssh -t -L 23946:localhost:23946 myhost '~/source/bin/lin
 alias serve='python3 -m http.server 8888 -d'
 
 
+alias disasm="llvm-mc --cdis --hex --output-asm-variant=1"
 
 # -----------------------------------------------------------------------------
 # AI-powered Git Commit Function
