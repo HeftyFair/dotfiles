@@ -151,7 +151,7 @@ function _update_all() {
   nvim --headless '+Lazy! sync' +qa
   pushd "$HOME/.config/nvim" && git pull && popd
   rustup upgrade
-  dotfiles pull
+  # dotfiles pull
   uv tool upgrade --all
 }
 
