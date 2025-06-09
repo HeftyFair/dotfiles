@@ -81,7 +81,7 @@ alias emx='emacsclient -t'
 # -----------------------------------------------------------------------------
 # Git Shortcuts
 # -----------------------------------------------------------------------------
-alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+# alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 # alias df='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias gitcam="git commit -a -m"
 
