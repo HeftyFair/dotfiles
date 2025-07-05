@@ -63,3 +63,7 @@ export PATH="$HOME/source/vm/emu/quickemu/:$PATH"
 function use_depot() {
   export PATH="/home/kwqcheii/source/chromium/depot_tools":$PATH
 }
+
+
+alias gef='gdb --early-init-eval-command="set auto-load safe-path /" --command=/home/kwqcheii/source/bin/gef.py'
+alias kgef='gdb --early-init-eval-command="set auto-load safe-path /" --command=/home/kwqcheii/source/bin/gef.py -ex "target remote :1234"'
