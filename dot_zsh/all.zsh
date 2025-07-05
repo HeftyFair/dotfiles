@@ -135,10 +135,6 @@ EOF
 [[ -f "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
 
 
-export OPENAI_API_BASE=https://api.uniapi.io/v1
-export OPENAI_BASE_URL=https://api.uniapi.io/v1
-
-
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
