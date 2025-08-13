@@ -53,48 +53,48 @@ local function getDirectoryName(path)
 end
 
 
-wezterm.on('format-tab-title', function(tab, tabs, panes, config, hover, max_width)
-  local pane = tab.active_pane
-  local cwd_uri = pane.current_working_dir
-  local directoryName = 'Unknown'
-  local process = get_process(tab)
-
-  if cwd_uri then
-    -- Convert the URI to a string, remove the hostname, and decode %20s:
-    local cwd_path = cwd_uri.file_path
-    -- cwd_path = cwd_path:gsub("^file://[^/]+", "") -- not needed
-    -- cwd_path = decodeURI(cwd_path) -- not needed
-
-    -- Extract the directory name from the decoded path:
-    directoryName = getDirectoryName(cwd_path)
-  end
-
-  local title = string.format(' ⌘%s  %s  %s', (tab.tab_index + 1), directoryName, process) 
-
-  return {
-    { Text = title },
-  }
-end)
-
-
-
--- wezterm.on("format-tab-title", function(tab, tabs, panes, c, hover, max_width)
--- 	local palette = c.resolved_palette.tab_bar
--- 	local colors = {
--- 		bg = palette.background,
--- 		tab = tab.is_active and palette.active_tab.bg_color or palette.inactive_tab.bg_color,
--- 		fg = tab.is_active and palette.active_tab.fg_color or palette.inactive_tab.fg_color,
--- 	}
+-- wezterm.on('format-tab-title', function(tab, tabs, panes, config, hover, max_width)
+--   local pane = tab.active_pane
+--   local cwd_uri = pane.current_working_dir
+--   local directoryName = 'Unknown'
+--   local process = get_process(tab)
 --
--- 	return {
--- 		{ Background = { Color = colors.bg } },
--- 		{ Foreground = { Color = colors.tab } },
--- 		{ Text = wezterm.nerdfonts.ple_lower_right_triangle },
--- 		{ Background = { Color = colors.tab } },
--- 		{ Foreground = { Color = colors.fg } },
--- 		{ Text = tab.active_pane.title },
--- 		{ Background = { Color = colors.tab } },
--- 		{ Foreground = { Color = colors.bg } },
--- 		{ Text = wezterm.nerdfonts.ple_upper_right_triangle },
--- 	}
+--   if cwd_uri then
+--     -- Convert the URI to a string, remove the hostname, and decode %20s:
+--     local cwd_path = cwd_uri.file_path
+--     -- cwd_path = cwd_path:gsub("^file://[^/]+", "") -- not needed
+--     -- cwd_path = decodeURI(cwd_path) -- not needed
+--
+--     -- Extract the directory name from the decoded path:
+--     directoryName = getDirectoryName(cwd_path)
+--   end
+--
+--   local title = string.format(' ⌘%s  %s  %s', (tab.tab_index + 1), directoryName, process) 
+--
+--   return {
+--     { Text = title },
+--   }
 -- end)
+
+
+wezterm.on("format-tab-title", function(tab, tabs, panes, c, hover, max_width)
+	local palette = c.resolved_palette.tab_bar
+	local colors = {
+		bg = palette.background,
+		tab = tab.is_active and palette.active_tab.bg_color or palette.inactive_tab.bg_color,
+		fg = tab.is_active and palette.active_tab.fg_color or palette.inactive_tab.fg_color,
+	}
+
+	return {
+		{ Background = { Color = colors.bg } },
+		{ Foreground = { Color = colors.tab } },
+		{ Text = wezterm.nerdfonts.ple_lower_right_triangle },
+		-- { Text = wezterm.nerdfonts.ple_lower_right_triangle },
+		{ Background = { Color = colors.tab } },
+		{ Foreground = { Color = colors.fg } },
+		{ Text = tab.active_pane.title },
+		-- { Background = { Color = colors.tab } },
+		-- { Foreground = { Color = colors.bg } },
+		-- { Text = wezterm.nerdfonts.ple_upper_right_triangle },
+	}
+end)

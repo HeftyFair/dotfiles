@@ -6,28 +6,28 @@ local keys = {}
 
 -- local wezterm = require 'wezterm'
 
-wezterm.on('bell', function(window, pane)
-  window:toast_notification('wezterm', 'configuration reloaded!', nil, 4000)
-
-  wezterm.log_info('the bell was rung in pane ' .. pane:pane_id() .. '!')
-  -- Send macOS notification using osascript
-  local notification_title = "WezTerm Bell"
-  local notification_message = "Bell rang in pane " .. pane:pane_id()
-  -- Use wezterm.run_child_process to execute osascript
-  local success, stdout, stderr = wezterm.run_child_process({
-    'osascript',
-    '-e',
-    string.format(
-      'display notification "%s" with title "%s" sound name "Morse"',
-      notification_message,
-      notification_title
-    )
-  })
-  -- Log any errors
-  if not success then
-    wezterm.log_error('Failed to send notification: ' .. stderr)
-  end
-end)
+-- wezterm.on('bell', function(window, pane)
+--   window:toast_notification('wezterm', 'configuration reloaded!', nil, 4000)
+--
+--   wezterm.log_info('the bell was rung in pane ' .. pane:pane_id() .. '!')
+--   -- Send macOS notification using osascript
+--   local notification_title = "WezTerm Bell"
+--   local notification_message = "Bell rang in pane " .. pane:pane_id()
+--   -- Use wezterm.run_child_process to execute osascript
+--   local success, stdout, stderr = wezterm.run_child_process({
+--     'osascript',
+--     '-e',
+--     string.format(
+--       'display notification "%s" with title "%s" sound name "Morse"',
+--       notification_message,
+--       notification_title
+--     )
+--   })
+--   -- Log any errors
+--   if not success then
+--     wezterm.log_error('Failed to send notification: ' .. stderr)
+--   end
+-- end)
 
 
 wezterm.on(

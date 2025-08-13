@@ -3,8 +3,8 @@ local wezterm = require("wezterm")
 local function segments_for_right_status(window)
 	return {
 		-- window:active_workspace(),
-		wezterm.mux.get_domain():name(),
-		wezterm.strftime("%a %b %-d %H:%M"),
+		-- wezterm.mux.get_domain():name(),
+		-- wezterm.strftime("%a %b %-d %H:%M"),
 		wezterm.hostname(),
 	}
 end
@@ -65,7 +65,7 @@ wezterm.on("update-status", function(window, _)
 		table.insert(elements, { Text = " " .. seg .. " " })
 	end
 
-	window:set_right_status(wezterm.format(elements))
+	-- window:set_right_status(wezterm.format(elements))
 end)
 --
 --

@@ -3,7 +3,7 @@ local window = require("appearance/window")
 local utils = require("utils")
 local graphics = require("appearance/graphics")
 local theme = require("appearance/theme")
-require("appearance/status")
+-- require("appearance/status")
 require("appearance/tab")
 
 local M = {}

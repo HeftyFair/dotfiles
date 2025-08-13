@@ -10,11 +10,6 @@ path=(
     $path
 )
 
-# >>>> Vagrant command completion (start)
-fpath=(/nix/store/dy3gm8llzibzqrk6gfb34yviq8bcr1s4-vagrant-2.4.1/lib/ruby/gems/3.1.0/gems/vagrant-2.4.1/contrib/zsh $fpath)
-#compinit
-# <<<<  Vagrant command completion (end)
-#
 
 #
 function use_pin ()

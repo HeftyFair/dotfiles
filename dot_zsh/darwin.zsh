@@ -22,7 +22,7 @@ export PATH="/opt/homebrew/opt/grep/libexec/gnubin":$PATH
 type fzf &> /dev/null && eval "$(fzf --zsh)"
 
 
-eval "$(fnm env --use-on-cd)"
+# eval "$(fnm env --use-on-cd)"
 # export PATH=$PATH:'/Applications/Binary Ninja.app/Contents/MacOS'
 
 #. "$HOME/.rye/env"

@@ -27,7 +27,6 @@ M.config = {
 	-- 	top = 8,
 	-- 	bottom = 8,
 	-- },
-
 }
 
 return M
