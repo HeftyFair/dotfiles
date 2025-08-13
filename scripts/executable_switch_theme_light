@@ -1,0 +1,13 @@
+#!/usr/bin/env zsh
+
+
+script_file_path=$(basename "$0")
+_THEME=${(C)${script_file_path##*_}}
+
+echo "export THEME=$_THEME" > "$HOME/.zsh/theme.zsh"
+
+for host in "myhost" "archlinux"
+do
+	ssh $host "echo 'export THEME=$_THEME' > \$HOME/.zsh/theme.zsh"
+done
+
