@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-#GRAPH_VISUALIZER
-tmp_svg=$(/opt/homebrew/bin/gmktemp --suffix=.svg)
-dot_file="$1"
-/opt/homebrew/bin/dot -Tsvg "$dot_file" >"$tmp_svg"
-qlmanage -p "$tmp_svg"
