@@ -143,7 +143,6 @@ export REPO_URL='https://mirrors.tuna.tsinghua.edu.cn/git/git-repo'
 
 function _update_all() {
   antidote update
-  pipx upgrade-all
   nvim --headless '+Lazy! sync' +qa
   pushd "$HOME/.config/nvim" && git pull && popd
   rustup upgrade

@@ -100,5 +100,3 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 # Added by Windsurf
 export PATH="/Users/andreigavrilov/.codeium/windsurf/bin:$PATH"
-
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
